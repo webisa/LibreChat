@@ -45,15 +45,15 @@ services:
       - ./.env.production:/app/.env.production
       - /app/api/node_modules
       - ./images:/app/client/public/images
-  mongodb:
-    container_name: chat-mongodb
-    ports:
-      - 27018:27017
-    image: mongo
-    restart: always
-    volumes:
-      - ./data-node:/data/db
-    command: mongod --noauth
+  # mongodb:
+  #   container_name: chat-mongodb
+  #   ports:
+  #     - 27018:27017
+  #   image: mongo
+  #   restart: always
+  #   volumes:
+  #     - ./data-node:/data/db
+  #   command: mongod --noauth
   meilisearch:
     container_name: chat-meilisearch
     image: getmeili/meilisearch:v1.0

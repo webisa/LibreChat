@@ -16,7 +16,7 @@ services:
   api:
     container_name: LibreChat
     ports:
-      - 3080:3080               # Change it to 9000:3080 to use nginx
+      - 8080:3080               # Change it to 9000:3080 to use nginx
     depends_on:
       - mongodb
     image: librechat                # Comment this & uncomment below to build from docker hub image
